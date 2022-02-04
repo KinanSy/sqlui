@@ -28,6 +28,7 @@ namespace sqlui
         }
         private void RefreshDBList()
         {
+            lstDatabases.Items.Clear();
             MySqlCommand cmd = mysqlCon.CreateCommand();
             cmd.CommandText = "SHOW DATABASES;";
             MySqlDataReader Reader;
